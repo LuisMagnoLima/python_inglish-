@@ -1,14 +1,22 @@
 import PySimpleGUI as sg
-def questions_window(question):
+def questions_window(question, player, theme, points):
+    sg.theme = theme
     letters = ['A', 'B', 'C', 'D']
-    layout = [[sg.Text(f'{player}'), sg.Text(f'Pontos: {pontos}')],
-              [sg.Text(question['title'])],
-              [[sg.Radio(f'{letters[counter]}', group_id='alternatives', size=(2,2), key=f'{alternative}'), 
-                sg.Text(f'{alternative}', size=(20, 1))] for counter, alternative in enumerate(question['alternatives'])],
-              [sg.Button('Confirm', size=(8)), sg.Button('Exit', size=(8))],
+    layout = [[sg.Text(f'{player}'.upper(), size=(10, 3), background_color='white', text_color='black'), 
+               sg.Text(f'Points: {points}', size=(10, 3), background_color='white', text_color='black')],
+              [sg.Text(f'{question["title"]}'.upper(), background_color='white', text_color='black')],
+              [[sg.Button(f'{letters[counter]} - {alternative}'.upper(), 
+                        size=(40, 3),
+                        )] 
+                        for counter, alternative in enumerate(question['alternatives'])],
               ]
     
-    window = sg.Window('Menu players', layout=layout, element_justification='c')
+
+    window = sg.Window('Menu players', 
+                       layout=layout, 
+                       element_justification='c', 
+                       background_color=theme['background'],
+                       size=(400, 400) )
 
     while True:
         event, value = window.read()
@@ -18,8 +26,16 @@ def questions_window(question):
 
 
 if __name__=="__main__":
-    questao = {'title':'description of the question', 
-               'alternatives':['answer 1', 'answer 2fgohgoifhegoh wogji oweirjgojewrgo ijreg', 'answer 3', 'answer 4'],
+    questao = {'title':'What is the capital of France?', 
+               'alternatives':['Berlin', 'Madrid', 'Paris', 'Rome'],
                'correct_answer':'awnser 1'}
     
-    questions_window(questao)
+    theme1 = {'background': 'white', 'text-color': 'black', 'background-button': 'blue'}
+
+    theme2 = {'background': 'white', 'text-color': 'black', 'background-button': 'red'}
+    
+    player = 'Jogador1'
+
+    points = 0
+
+    questions_window(questao, player, theme1, points)
