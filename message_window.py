@@ -1,6 +1,5 @@
 import PySimpleGUI as sg
-from time import time
-def window_names():
+def message_window():
 
     layout = [[sg.Text('PLAYER 1 AND PLAYER 2 GET', background_color='white', text_color='black')],
               [sg.Text('READY !', background_color='white', text_color='black')],
@@ -34,4 +33,4 @@ def window_names():
 
 
 if __name__ == "__main__":
-    window_names()
+    None

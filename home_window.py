@@ -1,6 +1,7 @@
+from message_window import message_window
 import PySimpleGUI as sg
 
-def window_names():
+def start_window():
     layout = [[sg.Image('imagens/imagem1.png')],
               [sg.Text('', background_color='white')],
               [sg.Button('START', size=(10, 1), button_color='#00B2FF')],
@@ -14,7 +15,10 @@ def window_names():
         print(event)
         if event == sg.WINDOW_CLOSED or event == 'EXIT':
             break
+        elif event=='START':
+            window.close()
+            return True
 
 
 if __name__ == "__main__":
-    window_names()
+    None
