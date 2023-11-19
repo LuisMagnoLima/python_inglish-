@@ -1,8 +1,9 @@
 import PySimpleGUI as sg
+from popups import popup_correct_answer, popup_incorrect_answer
 def questions_window(question, player, theme, points):
     sg.theme = theme
     letters = ['A', 'B', 'C', 'D']
-    layout = [[sg.Button(f'{player}   |   Points: {points}'.upper(), size=(30, 3),button_color=('black', 'white'))],
+    layout = [[sg.Button(f'{player}   |   Points: {points}'.upper(), size=(30, 3),button_color=('black', 'white'), disabled=True)],
               [sg.Text('', background_color=theme['background'])],
               [sg.Text('', background_color=theme['background'])],
               [sg.Text(f'{question["title"]}'.upper(), background_color=theme['background'], text_color=theme['text-color'])],
@@ -14,29 +15,27 @@ def questions_window(question, player, theme, points):
               ]
     
 
-    window = sg.Window('Menu players', 
+    window = sg.Window('QUESTION', 
                        layout=layout, 
                        element_justification='c', 
                        background_color=theme['background'],
-                       size=(400, 400) )
+                       size=(400, 450) )
 
     while True:
         event, value = window.read()
         print(event, value)
 
-        print(event.split()[0].upper())
-        print(question['correct_answer'].upper())
         if event==sg.WINDOW_CLOSED or event=='Exit':
             break
 
 
         if event.split()[0].upper() == question['correct_answer'].upper():
-            # adicionar popup de acerto
+            popup_correct_answer(player)
             return 1
-        
+
         else:
-            # adicionar popup de erro
-            return -1
+            popup_incorrect_answer(question)
+            return 0
 
 
 

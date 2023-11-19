@@ -11,14 +11,16 @@ if __name__ == "__main__":
     player2 = 'Jogador 2'
     questao = {'title':'What is the capital of France?', 
                'alternatives':['Berlin', 'Madrid', 'Paris', 'Rome'],
-               'correct_answer':'awnser 1'}
+               'Paris':'awnser 1'}
 
     
     # begin code
     start = start_window()
     if start:
         message_window()
-        questions_window(player=player1, question=questao, theme=theme1, points=0)
+        while True:
+            questions_window(player=player1, question=questao, theme=theme1, points=0)
+
 
 
 
