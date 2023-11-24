@@ -1,7 +1,7 @@
 from windows.home_window import start_window
 from windows.message_window import message_window
 from windows.questions_window import questions_window
-from questions import creating_questions, remove_question, reading_questions
+from questions.questions import creating_questions, remove_question, reading_questions
 from random import randint
 from windows.results_window import victory_player, draw
 
