@@ -4,7 +4,6 @@ def questions_window(question, player, theme, points):
     sg.theme = theme
     letters = ['A', 'B', 'C', 'D']
     layout = [[sg.Button(f'{player}   |   Points: {points}'.upper(), size=(30, 3),button_color=('black', 'white'), disabled=True)],
-              [sg.Image('imagens/imagem2.png')],
               [sg.Text('', background_color=theme['background'])],
               [sg.Text('', background_color=theme['background'])],
               [sg.Text(f'{question["title"]}'.upper(), background_color=theme['background'], text_color=theme['text-color'])],
