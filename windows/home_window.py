@@ -1,4 +1,4 @@
-from message_window import message_window
+from windows.message_window import message_window
 import PySimpleGUI as sg
 
 def start_window():
@@ -12,7 +12,6 @@ def start_window():
 
     while True:
         event, value = window.read()
-        print(event)
         if event == sg.WINDOW_CLOSED or event == 'EXIT':
             break
         elif event=='START':
