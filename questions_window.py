@@ -4,6 +4,7 @@ def questions_window(question, player, theme, points):
     sg.theme = theme
     letters = ['A', 'B', 'C', 'D']
     layout = [[sg.Button(f'{player}   |   Points: {points}'.upper(), size=(30, 3),button_color=('black', 'white'), disabled=True)],
+              [sg.Image('imagens/imagem2.png')],
               [sg.Text('', background_color=theme['background'])],
               [sg.Text('', background_color=theme['background'])],
               [sg.Text(f'{question["title"]}'.upper(), background_color=theme['background'], text_color=theme['text-color'])],
@@ -21,20 +22,24 @@ def questions_window(question, player, theme, points):
                        background_color=theme['background'],
                        size=(400, 450) )
 
+   
+    
     while True:
         event, value = window.read()
         print(event, value)
 
         if event==sg.WINDOW_CLOSED or event=='Exit':
-            break
+            raise Exception('The game is finish')
 
 
         if event.split()[0].upper() == question['correct_answer'].upper():
             popup_correct_answer(player)
+            window.close()
             return 1
 
         else:
             popup_incorrect_answer(question)
+            window.close()
             return 0
 
 

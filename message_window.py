@@ -22,15 +22,12 @@ def message_window():
         event, value = window.read()
         
         if event == sg.WINDOW_CLOSED:
+            window.close()
             break
 
         if event == 'start':
+            window.close()
             return True
-
-
-
-
-
 
 if __name__ == "__main__":
     None

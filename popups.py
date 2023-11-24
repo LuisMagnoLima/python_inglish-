@@ -3,7 +3,7 @@ import PySimpleGUI as sg
 def popup_correct_answer(player):
     frame_layout = [[sg.Text('GREAT!! THE QUESTION IS CORRECT',  background_color='#86dff5', text_color='black')],
                     [sg.Text(f'THE {player}  EARNED A POINT',  background_color='#86dff5', text_color='black')],
-                    [sg.Text('0', background_color='#86dff5', text_color='black')],]
+                    [sg.Text('+1 point', background_color='#86dff5', text_color='black')],]
 
     layout = [[sg.Frame('r', layout=frame_layout, background_color='#86dff5', element_justification='c')],
               [sg.Button('CLOSE',  button_color=('black', '#86dff5'))]]
@@ -28,7 +28,7 @@ def popup_incorrect_answer(question):
     layout = [[sg.Frame('r', layout=frame_layout, background_color=error_color, element_justification='c')],
               [sg.Button('CLOSE',  button_color=('black', error_color))]]
     
-    window = sg.Window('GREAT!!', layout, element_justification='c', background_color='white')
+    window = sg.Window('OH NO!!', layout, element_justification='c', background_color='white')
 
     while True:
         print(window)
