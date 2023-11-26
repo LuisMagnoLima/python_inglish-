@@ -7,7 +7,7 @@ def victory_player(player, points, theme):
                        background_color=theme['background'],
                        text_color=theme['text-color'])],
 
-              [sg.Text(f'THEY SCORED {points} POINTS!!!!', 
+              [sg.Text(f'HE SCORED {points} POINTS!!!!', 
                        background_color=theme['background'],
                        text_color=theme['text-color'])],
 
