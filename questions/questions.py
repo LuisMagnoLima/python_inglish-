@@ -71,7 +71,7 @@ def creating_questions():
 
         {'title': 'What is the capital of Australia?', 'alternatives': ['Sydney', 'Melbourne', 'Canberra', 'Brisbane'], 'correct_answer': 'Canberra', 'index': '33'},
 
-        {'title': 'Who was the painter of the works The Starry Night and sunflowers?', 'alternatives': ['Pablo Picasso', 'Claude Monet', 'Vincet Van Gogh', 'Salvador Dalí'], 'correct_answer': 'Vincent Van Gogh', 'index': '34'},
+        {'title': 'Who was the painter of the works The Starry Night and sunflowers?', 'alternatives': ['Pablo Picasso', 'Claude Monet', 'Vincent Van Gogh', 'Salvador Dalí'], 'correct_answer': 'Vincent Van Gogh', 'index': '34'},
 
         {'title': 'What is the fifth planet in the solar system?', 'alternatives': ['Mars', 'Jupiter', 'saturn', 'Uranus'], 'correct_answer': 'Jupiter', 'index': '35'},
 
