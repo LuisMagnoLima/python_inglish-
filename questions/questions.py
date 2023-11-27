@@ -7,13 +7,13 @@ def creating_questions():
 
         {'title': 'Who was the first Brazillian president?', 'alternatives': ['Getúlio Vargas', 'Marechal Deodoro da Fonseca', 'Juscelino Kubitschek', 'Tancredo Neves'], 'correct_answer': 'Marechal Deodoro da Fonseca', 'index': '1'},
 
-        {'title': 'What year was assigned the Declaration of Independence of USA?', 'alternatives': ['1776', '1789', '1804', '1812'], 'correct_answer': '1776', 'index': '2'},
+        {'title': 'What year was signed the Declaration of Independence of USA?', 'alternatives': ['1776', '1789', '1804', '1812'], 'correct_answer': '1776', 'index': '2'},
 
         {'title': 'What is the square root of 144?', 'alternatives': ['10', '12', '14', '16'], 'correct_answer': '12', 'index': '3'},
 
         {'title': 'Who wrote it Dom Quixote?', 'alternatives': ['William Shakespeare', 'Miguel de Cervantes', 'Dante Alighieri', 'Jane Austen'], 'correct_answer': 'Miguel de Cervantes', 'index': '4'},
 
-        {'title': 'What is the longest river in the world?', 'alternatives': ['Mississipi', 'Nilo', 'Yangtzé', 'Amazonas'], 'correct_answer': 'Amazonas', 'index': '5'},
+        {'title': 'What is the longest river in the world?', 'alternatives': ['Mississipi', 'Nile', 'Yangtze', 'Amazon'], 'correct_answer': 'Amazon', 'index': '5'},
 
         {'title': 'What is the atomic number of oxygen?', 'alternatives': ['6', '8', '14', '16'], 'correct_answer': '8', 'index': '6'},
 
@@ -27,15 +27,15 @@ def creating_questions():
 
         {'title': 'Who is the author of Theory of Relativity?', 'alternatives': ['Isaac Newton', 'Galileu Galilei', 'Albert Einstein', 'Stephen Hawking'], 'correct_answer': 'Albert Einstein', 'index': '11'},
 
-        {'title': 'What is the largest desert of the world', 'alternatives': ['Saara', 'Gobi', 'Atacama', 'Antártica'], 'correct_answer': 'Antártica', 'index': '12'},
+        {'title': 'What is the largest desert of the world', 'alternatives': ['Sahara', 'Gobi', 'Atacama', 'Antarctica'], 'correct_answer': 'Antarctica', 'index': '12'},
 
         {'title': 'Who discorvered penicillin', 'alternatives': ['Alexander Fleming', 'Marie Curie', 'Louis Pasteur', 'Jonas Salk'], 'correct_answer': 'Alexander Fleming', 'index': '13'},
 
-        {'title': 'What is the most abundant element in Earth Surface?', 'alternatives': ['Ferro', 'Silício', 'Oxigênio', 'Alumínio'], 'correct_answer': 'Oxigênio', 'index': '14'},
+        {'title': 'What is the most abundant element in Earth Surface?', 'alternatives': ['Iron', 'Silicon', 'Oxygen', 'Aluminum'], 'correct_answer': 'Oxygen', 'index': '14'},
 
         {'title': 'Who was the first man to step on the moon', 'alternatives': ['Yuri Gargarin', 'Neil Armstrong', 'Buzz Aldrin', 'Michael Collins'], 'correct_answer': 'Neil Armstrong', 'index': '15'},
 
-        {'title': 'What is the WWFs symbol animal?', 'alternatives': ['Tigre', 'Elefante', 'Panda', 'Gorila'], 'correct_answer': 'Panda', 'index': '16'},
+        {'title': 'What is the WWFs symbol animal?', 'alternatives': ['Tiger', 'Elephant', 'Panda', 'Gorilla'], 'correct_answer': 'Panda', 'index': '16'},
 
         {'title': 'Who wrote it Romeu and Julieta?', 'alternatives': ['Charles Dickens', 'William Faulkner', 'William Shakespeare', 'Ziraldo'], 'correct_answer': 'William Shakespeare', 'index': '17'},
 
@@ -47,7 +47,7 @@ def creating_questions():
 
         {'title': 'Who was the inventor of the telephone?', 'alternatives': ['Alexander Graham Bell', 'Nikola Tesla', 'Thomas Edison', 'Marconi'], 'correct_answer': 'Alexander Graham Bell', 'index': '21'},
 
-        {'title': 'What is the second largest ocean in the world?', 'alternatives': ['Oceano Índico', 'Oceano Atlântico', 'Oceano Antártico', 'Oceano Pacífico'], 'correct_answer': 'Oceano Atlântico', 'index': '22'},
+        {'title': 'What is the second largest ocean in the world?', 'alternatives': ['Indian Ocean', 'Atlantic Ocean', 'Southern Ocean', 'Pacific Ocean'], 'correct_answer': 'Atlantic Ocean', 'index': '22'},
 
         {'title': 'Who was the founder of Microsoft?', 'alternatives': ['Steve Jobs', 'Bill Gates', 'Mark Zuckerberg', 'Jeff Bezos'], 'correct_answer': 'Bill Gates', 'index': '23'},
 
@@ -59,7 +59,7 @@ def creating_questions():
 
         {'title': 'What is the biggest land mammal?', 'alternatives': ['Elephant', 'Giraffe', 'Rhinoceros', 'Blue Whale'], 'correct_answer': 'Elephant', 'index': '27'},
 
-        {'title': 'Who was the South African leader that fought against apartheid?', 'alternatives': ['Nelson Mandela', 'Desmond tutu', 'F.W. de Klerk', 'Thabo Mbeki'], 'correct_answer': 'Nelson Mandela', 'index': '28'},
+        {'title': 'Who was the South African leader that fought against apartheid?', 'alternatives': ['Nelson Mandela', 'Desmond Tutu', 'F.W. de Klerk', 'Thabo Mbeki'], 'correct_answer': 'Nelson Mandela', 'index': '28'},
 
         {'title': 'What is the biggest animal on the planet?', 'alternatives': ['Elephant', 'Giraffe', 'Rhinoceros', 'Blue Whale'], 'correct_answer': 'Blue Whale', 'index': '29'},
 
@@ -85,19 +85,19 @@ def creating_questions():
 
         {'title': 'Who was the first astronaut to orbit the Earth?', 'alternatives': ['Yuri Gagarin', 'Alan Shepard', 'John Glenn', 'Neil Armstrong'], 'correct_answer': 'Yuri Gagarin', 'index': '40'},
 
-        {'title': 'What is the full name of the physicist known as Hawking?', 'alternatives': ['Stephen Alexander Hawking', 'tephen William Hawking', 'Stephen James Hawking', 'Stephen Richard Hawking'], 'correct_answer': 'Stephen William Hawking', 'index': '41'},
+        {'title': 'What is the full name of the physicist known as Hawking?', 'alternatives': ['Stephen Alexander Hawking', 'Stephen William Hawking', 'Stephen James Hawking', 'Stephen Richard Hawking'], 'correct_answer': 'Stephen William Hawking', 'index': '41'},
 
-        {'title': 'Who was the author of "The Three Musketeers"?', 'alternatives': ['Victor hugo', 'Alexandrdre Dumas', 'Gustave Flaubert', 'Émile Zola'], 'correct_answer': 'Alexandre Dumas', 'index': '42'},
+        {'title': 'Who was the author of "The Three Musketeers"?', 'alternatives': ['Victor hugo', 'Alexandre Dumas', 'Gustave Flaubert', 'Émile Zola'], 'correct_answer': 'Alexandre Dumas', 'index': '42'},
 
         {'title': 'In what year was the UN (United Nations) founded?', 'alternatives': ['1945', '1950', '1960', '1975'], 'correct_answer': '1945', 'index': '43'},
 
-        {'title': 'hat is the second largest country in the world by land area?', 'alternatives': ['China', 'United States', 'Russia', 'Canada'], 'correct_answer': 'Rússia', 'index': '44'},
+        {'title': 'hat is the second largest country in the world by land area?', 'alternatives': ['China', 'United States', 'Russia', 'Canada'], 'correct_answer': 'Russia', 'index': '44'},
 
         {'title': 'Who was the Greek philosopher known for his contributions to ethics?', 'alternatives': ['Plato', 'Aristotle', 'Socrates', 'Epicurus'], 'correct_answer': 'Aristotle', 'index': '45'},
 
-        {'title': 'at is the most abundant element in the human body?', 'alternatives': ['iron', 'Oxygen', 'Carbon', 'Calcium'], 'correct_answer': 'Oxygen', 'index': '46'},
+        {'title': 'at is the most abundant element in the human body?', 'alternatives': ['Iron', 'Oxygen', 'Carbon', 'Calcium'], 'correct_answer': 'Oxygen', 'index': '46'},
 
-        {'title': 'Who is known as "the Bard of Avon"?', 'alternatives': ['William Wordsworth', 'Jhon Milton', 'William Shaekespeare', 'Geoffrey Chaucer'], 'correct_answer': 'William Shaekespeare', 'index': '47'},
+        {'title': 'Who is known as "the Bard of Avon"?', 'alternatives': ['William Wordsworth', 'Jhon Milton', 'William Shakespeare', 'Geoffrey Chaucer'], 'correct_answer': 'William Shakespeare', 'index': '47'},
 
         {'title': 'What is the only planet in the solar system that rotates clockwise?', 'alternatives': ['Venus', 'Uranus', 'Neptune', 'Mars'], 'correct_answer': 'Venus', 'index': '48'},]
 
