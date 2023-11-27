@@ -1,23 +1,22 @@
-import PySimpleGUI as sg
+from PySimpleGUI import Text, Button, Window, WINDOW_CLOSED
 from windows.popups import popup_correct_answer, popup_incorrect_answer
+
 def questions_window(question, player, theme, points):
-    sg.theme = theme
     letters = ['A', 'B', 'C', 'D']
-    layout = [[sg.Button(f'{player}   |   Points: {points}'.upper(), size=(30, 3),button_color=('black', 'white'), disabled=True)],
-              [sg.Text('', background_color=theme['background'])],
-              [sg.Text('', background_color=theme['background'])],
-              [sg.Text(f'{question["title"].split()[0:7]}'.upper().replace("'","").replace('[','').replace(']','').replace(',',''), background_color=theme['background'], text_color=theme['text-color'])],
-              [sg.Text(f'{question["title"].split()[7:]}'.upper().replace("'","").replace('[','').replace(']','').replace(',',''), background_color=theme['background'], text_color=theme['text-color'])],
-              
-              [sg.Text('', background_color=theme['background'])],
-              [[sg.Button(f'{letters[counter]} - {alternative}'.upper(), 
+    layout = [[ Button(f'{player}   |   Points: {points}'.upper(), size=(30, 3),button_color=('black', 'white'), disabled=True)],
+              [ Text('', background_color=theme['background'])],
+              [ Text('', background_color=theme['background'])],
+              [ Text(f'{question["title"].split()[0:7]}'.upper().replace("'","").replace('[','').replace(']','').replace(',',''), background_color=theme['background'], text_color=theme['text-color'])],
+              [ Text(f'{question["title"].split()[7:]}'.upper().replace("'","").replace('[','').replace(']','').replace(',',''), background_color=theme['background'], text_color=theme['text-color'])],              
+              [ Text('', background_color=theme['background'])],
+              [[ Button(f'{letters[counter]} - {alternative}'.upper(), 
                         size=(40, 3), key=f'{alternative}', button_color=theme['background-button']
                         )] 
                         for counter, alternative in enumerate(question['alternatives'])],
               ]
     
 
-    window = sg.Window('QUESTION', 
+    window =  Window('THE KNOW-IT-ALL', 
                        layout=layout, 
                        element_justification='c', 
                        background_color=theme['background'],
@@ -28,7 +27,7 @@ def questions_window(question, player, theme, points):
     while True:
         event, value = window.read()
 
-        if event==sg.WINDOW_CLOSED or event=='Exit':
+        if event== WINDOW_CLOSED or event=='Exit':
             raise()
 
 

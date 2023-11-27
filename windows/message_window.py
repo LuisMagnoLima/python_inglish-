@@ -1,19 +1,19 @@
-import PySimpleGUI as sg
+from PySimpleGUI import Text, Button, Window, WINDOW_CLOSED
 def message_window():
 
-    layout = [[sg.Text('PLAYER 1 AND PLAYER 2 GET', background_color='white', text_color='black')],
-              [sg.Text('READY !', background_color='white', text_color='black')],
-              [sg.Text('EACH QUESTION WILL BE', background_color='white', text_color='black')],
-              [sg.Text('WORTH 1 POINT.', background_color='white', text_color='black')],
-              [sg.Text('WAIT EVERYONE`S TURN.', background_color='white', text_color='black')],
-              [sg.Text('GOOD LUCK!', background_color='white', text_color='black')],
-              [sg.Text('BECAUSE YOU WILL NEED IT ...', background_color='white', text_color='black')],
-              [sg.Text('', background_color='white')],
-              [sg.Text('', background_color='white')],
-              [sg.Button('LET`S GO!!!', key='start', button_color='#00B2FF')]
+    layout = [[ Text('PLAYER 1 AND PLAYER 2 GET', background_color='white', text_color='black')],
+              [ Text('READY !', background_color='white', text_color='black')],
+              [ Text('EACH QUESTION WILL BE', background_color='white', text_color='black')],
+              [ Text('WORTH 1 POINT.', background_color='white', text_color='black')],
+              [ Text('WAIT EVERYONE`S TURN.', background_color='white', text_color='black')],
+              [ Text('GOOD LUCK!', background_color='white', text_color='black')],
+              [ Text('BECAUSE YOU WILL NEED IT ...', background_color='white', text_color='black')],
+              [ Text('', background_color='white')],
+              [ Text('', background_color='white')],
+              [ Button('LET`S GO!!!', key='start', button_color='#00B2FF')]
             ]
 
-    window = sg.Window('Select the players names', 
+    window =  Window('THE KNOW-IT-ALL', 
                        layout=layout, element_justification='c',  
                        background_color='white',
                        size=(300, 270))
@@ -21,7 +21,7 @@ def message_window():
     while True:
         event, value = window.read()
         
-        if event == sg.WINDOW_CLOSED:
+        if event ==  WINDOW_CLOSED:
             window.close()
             break
 

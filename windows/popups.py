@@ -1,40 +1,39 @@
-import PySimpleGUI as sg
-
+from PySimpleGUI import Frame, Text, Button, Window, WINDOW_CLOSED
 def popup_correct_answer(player):
-    frame_layout = [[sg.Text('GREAT!! THE QUESTION IS CORRECT',  background_color='#86dff5', text_color='black')],
-                    [sg.Text(f'THE {player}  EARNED A POINT',  background_color='#86dff5', text_color='black')],
-                    [sg.Text('+1 point', background_color='#86dff5', text_color='black')],]
+    frame_layout = [[ Text('GREAT!! THE QUESTION IS CORRECT',  background_color='#86dff5', text_color='black')],
+                    [ Text(f'THE {player}  EARNED A POINT',  background_color='#86dff5', text_color='black')],
+                    [ Text('+1 point', background_color='#86dff5', text_color='black')],]
 
-    layout = [[sg.Frame('r', layout=frame_layout, background_color='#86dff5', element_justification='c')],
-              [sg.Button('CLOSE',  button_color=('black', '#86dff5'))]]
+    layout = [[ Frame('r', layout=frame_layout, background_color='#86dff5', element_justification='c')],
+              [ Button('CLOSE',  button_color=('black', '#86dff5'))]]
     
-    window = sg.Window('GREAT!!', layout, element_justification='c', background_color='white')
+    window =  Window('GREAT!!', layout, element_justification='c', background_color='white')
 
     while True:
         print(window)
         event, value = window.read()
 
-        if event == sg.WINDOW_CLOSED or event == 'CLOSE':
+        if event ==  WINDOW_CLOSED or event == 'CLOSE':
             window.close()
             break
 
 
 def popup_incorrect_answer(question):
     error_color = "#f79393"
-    frame_layout = [[sg.Text('OH NO!! THE QUESTION IS INCORRECT',  background_color=error_color, text_color='black')],
-                    [sg.Text(f'THE CORRECT ANSWER IS: ',  background_color=error_color, text_color='black')],
-                    [sg.Text(f'->{question["correct_answer"]}<-'.upper(), background_color=error_color, text_color='black')],]
+    frame_layout = [[ Text('OH NO!! THE QUESTION IS INCORRECT',  background_color=error_color, text_color='black')],
+                    [ Text(f'THE CORRECT ANSWER IS: ',  background_color=error_color, text_color='black')],
+                    [ Text(f'->{question["correct_answer"]}<-'.upper(), background_color=error_color, text_color='black')],]
 
-    layout = [[sg.Frame('r', layout=frame_layout, background_color=error_color, element_justification='c')],
-              [sg.Button('CLOSE',  button_color=('black', error_color))]]
+    layout = [[ Frame('r', layout=frame_layout, background_color=error_color, element_justification='c')],
+              [ Button('CLOSE',  button_color=('black', error_color))]]
     
-    window = sg.Window('OH NO!!', layout, element_justification='c', background_color='white')
+    window =  Window('OH NO!!', layout, element_justification='c', background_color='white')
 
     while True:
         print(window)
         event, value = window.read()
         
-        if event == sg.WINDOW_CLOSED or event == 'CLOSE':
+        if event ==  WINDOW_CLOSED or event == 'CLOSE':
             window.close()
             break
 

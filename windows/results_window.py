@@ -1,51 +1,50 @@
-import PySimpleGUI as sg
-
+from PySimpleGUI import Image, Text, Button, Window, WINDOW_CLOSED
 
 
 def victory_player(player, points, theme):
-    layout = [[sg.Text(f'CONGRATULATION, THE -> {player} <- IS THE CHAMPION!!!'.upper(), 
+    layout = [[ Text(f'CONGRATULATION, THE -> {player} <- IS THE CHAMPION!!!'.upper(), 
                        background_color=theme['background'],
                        text_color=theme['text-color'])],
 
-              [sg.Text(f'HE SCORED {points} POINTS!!!!', 
+              [ Text(f'HE SCORED {points} POINTS!!!!', 
                        background_color=theme['background'],
                        text_color=theme['text-color'])],
 
-              [sg.Button('CLOSE', button_color=theme['background-button'])]
+              [ Button('CLOSE', button_color=theme['background-button'])]
               ]
 
-    window = sg.Window('WINNER', 
+    window =  Window('WINNER', 
                        layout, 
                        element_justification='center',
                        background_color=theme['background'])
 
     while True:
         event, value = window.read()
-        if event == sg.WINDOW_CLOSED or event == 'CLOSE':
+        if event ==  WINDOW_CLOSED or event == 'CLOSE':
             window.close()
             break
 
 def draw(theme, points):
-    layout = [[sg.Text(f'the match is over and we have a draw!'.upper(), 
+    layout = [[ Text(f'the match is over and we have a draw!'.upper(), 
                        background_color=theme['background'],
                        text_color=theme['text-color'])],
 
-              [sg.Text(f'both players scored {points} points'.upper(), 
+              [ Text(f'both players scored {points} points'.upper(), 
                        background_color=theme['background'],
                        text_color=theme['text-color'])],
 
-              [sg.Button('CLOSE', button_color=theme['background-button'])]
+              [ Button('CLOSE', button_color=theme['background-button'])]
               ]
     
 
-    window = sg.Window('WINNER', 
+    window =  Window('WINNER', 
                        layout, 
                        element_justification='center',
                        background_color=theme['background'])
 
     while True:
         event, value = window.read()
-        if event == sg.WINDOW_CLOSED or event == 'CLOSE':
+        if event ==  WINDOW_CLOSED or event == 'CLOSE':
             window.close()
             break
     

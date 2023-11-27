@@ -4,6 +4,7 @@ from windows.questions_window import questions_window
 from questions.questions import creating_questions, remove_question, reading_questions
 from random import randint
 from windows.results_window import victory_player, draw
+from windows.popups import *
 
 if __name__ == "__main__":
     
